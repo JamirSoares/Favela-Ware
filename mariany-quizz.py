@@ -1,4 +1,4 @@
-##by Mateus e Evandro
+# by Mateus e Evandro
 
 from ast import While
 from random import randint
@@ -17,53 +17,53 @@ listaPerguntas = [
     'qual tipo de variável indica um texto?',
 
     'quais valores o tipo de variável bool indica?'
-    ]
+]
 
 
-listaRespostas =[[
+listaRespostas = [[
     'a.input\n',
     'b.inteiro'],
 
     ['a.input\n',
-    'b.print'],
+     'b.print'],
 
     ['a.str\n',
-    'b.int'],
+     'b.int'],
 
     ['a.float\n',
-    'b.boolean'],
+     'b.boolean'],
 
     ['a.string\n',
-    'b.input'],
+     'b.input'],
 
     ['a.grande e pequeno\n',
-    'b.verdadeiro e falso']]
+     'b.verdadeiro e falso']]
 
 gabarito = ['a',
-            'b', 
+            'b',
             'b',
             'a',
             'a',
             'b']
 respostasCertas = 0
 respostasErradas = 0
-aleatorio = randint(0,5)
+aleatorio = randint(0, 5)
 print('responda as questões a seguir sobre python')
 
-for indice in range (len(listaPerguntas)):
-    aleatorio = randint(0,5)
+for indice in range(len(listaPerguntas)):
+    aleatorio = randint(0, 5)
     print(str(listaPerguntas[aleatorio]))
-   
+
     for i in range(len(listaRespostas[aleatorio])):
         print('\n'+listaRespostas[aleatorio][i])
     resposta = input('>>')
-    if(resposta == gabarito[aleatorio] ):
+    if(resposta == gabarito[aleatorio]):
         respostasCertas = respostasCertas + 1
         print('Acertou mizeravi')
-    if(resposta != gabarito[aleatorio] ):
+    if(resposta != gabarito[aleatorio]):
         respostasErradas = respostasErradas + 1
         print('se fudeo')
-   
+
 print('acertos: ' + str(respostasCertas))
-print('erros: ' + str(respostasErradas))        
+print('erros: ' + str(respostasErradas))
 input()
